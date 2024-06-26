@@ -1,0 +1,126 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    color: aqua;
+    padding: 1em;
+    text-align: center;
+    font-family: cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+}
+
+.player {
+    background-color: #222;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 0 50px 0 100px;
+}
+
+.controls button {
+    background-color: aqua;
+    color: #222;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1em 0;
+}
+
+.progress {
+    height: 5px;
+    background-color: aqua;
+    width: 0%;
+}
+
+.volume-control {
+    margin-top: 1em;
+}
+
+.playlist {
+    background-color: #222;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5px;
+    min-height: 50px;
+    min-width: 150px;
+    max-width: 150px;
+    max-height: 490px;
+}
+
+.playlist ul {
+   list-style: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 0.5em;
+    cursor: pointer;
+    border-bottom: 1px solid aqua;
+    border-left: 1px solid aqua ;
+    color: White;
+    
+}
+
+.playlist li:hover {
+    background-color: aqua;
+    color: black;
+    font-family: cursive;
+    
+
+}
+#song-title{
+    color:aqua;
+    font-family: cursive;
+}
+label{
+    color:aqua;
+}
+#text  {
+    
+    margin-top: 20px;
+    border: 2px black solid;
+    text-align: center;
+    width: 550px;
+    margin-left: 650px;
+    padding: 10px;
+    font-family: cursive;
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 8px;
+    color: black;
+    background: aqua;
+
+
+}
+.playlist li.playing {
+    background-color: aqua;
+    font-weight: bolder;
+    color: black;
+    font-family: cursive;
+}
