@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
    
     const songs = [
         { title: "How Could You Leeve Us", src: "NF - How Could You Leave Us - Copy.mp3" },
-        { title: "Change", src: "NF_-_Change_CeeNaija.com_.mp3" },
         { title: "3_Am", src: "NF_-_3_AM.mp3" },
+        { title: "Change", src: "NF_-_Change_CeeNaija.com_.mp3" },
+        
         { title: "Clouds", src: "NF_-_Clouds_CeeNaija.com_.mp3" },
         { title: "Can You Hold Me", src: "NF_-_Can_You_Hold_Me_CeeNaija.com_.mp3" },
         { title: "Dreams", src: "NF_-_Dreams_CeeNaija.com_.mp3" },
