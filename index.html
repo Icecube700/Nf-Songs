@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nf songs</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="nf-icon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <div class="head">
         <h1>NF songs </h1>
         
-    </nav>
+    </div>
     <div id="text">PLAYLIST</div>
     <main>
         <div class="player">
@@ -24,6 +28,7 @@
                 <button id="play-pause">Play</button>
                 <button id="next">Next</button>
                 <button id="shuffle">Shuffle</button>
+                <button id="repeat">Repeat Off</button>
             </div>
             <div class="progress-container">
                 <div id="progress" class="progress"></div>
@@ -33,9 +38,10 @@
                 <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
             </div>
         </div>
+        
         <div class="playlist">
             <ul id="playlist">
-                <li data-src="NF - How Could You Leave Us - Copy.mp3">How Could You Leeve Us</li>
+                <li data-src="NF - How Could You Leave Us - Copy.mp3">How Could You Leave Us</li>
                 <li data-src="NF_-_3_AM.mp3">3_Am</li>
                 <li data-src="NF_-_Change_CeeNaija.com_.mp3">Change</li>
                 <li data-src="NF_-_Clouds_CeeNaija.com_.mp3">Clouds</li>

@@ -10,12 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const progressContainer = document.querySelector(".progress-container");
     const progress = document.getElementById("progress");
     const volumeControl = document.getElementById("volume");
+    const repeatButton = document.getElementById("repeat");
     let currentSongIndex = 0;
     let isShuffling = false;
+    let isRepeating = false;
+    
 
    
     const songs = [
-        { title: "How Could You Leeve Us", src: "NF - How Could You Leave Us - Copy.mp3" },
+        { title: "How Could You Leave Us", src: "NF - How Could You Leave Us - Copy.mp3" },
         { title: "3_Am", src: "NF_-_3_AM.mp3" },
         { title: "Change", src: "NF_-_Change_CeeNaija.com_.mp3" },
         
@@ -139,6 +142,22 @@ document.addEventListener("DOMContentLoaded", function() {
         isShuffling = !isShuffling;
         shuffleButton.innerText = isShuffling ? "Shuffle On" : "Shuffle Off";
     }
+ 
+    function toggleRepeat() {
+        isRepeating = !isRepeating;
+        repeatButton.innerText = isRepeating ? "Repeat On" : "Repeat Off";
+    }
+
+    function handleSongEnd() {
+        if (isRepeating) {
+            audio.currentTime = 0;
+            audio.play();
+        } else {
+            playNext();
+        }
+    }
+
+
     
     playPauseButton.addEventListener("click", playPause);
     nextButton.addEventListener("click", playNext);
@@ -146,7 +165,9 @@ document.addEventListener("DOMContentLoaded", function() {
     shuffleButton.addEventListener("click", toggleShuffle);
     audio.addEventListener("timeupdate", updateProgress);
     volumeControl.addEventListener("input", setVolume);
+    repeatButton.addEventListener("click", toggleRepeat);
     progressContainer.addEventListener("click", setProgress);
+    audio.addEventListener("ended", handleSongEnd);
     
     playlistItems.forEach((item, index) => {
         item.addEventListener("click", () => {
